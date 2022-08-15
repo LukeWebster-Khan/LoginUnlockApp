@@ -5,12 +5,20 @@ export default function Nav() {
   return (
     <>
       <nav className="nav">
-        <div>Navicon</div>
+        <div>
+          <h1>Navicon</h1>
+        </div>
         <div>
           <ul className="nav-links">
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li>
+              <a>Home</a>
+            </li>
+            <li>
+              <a>About</a>
+            </li>
+            <li>
+              <a>Contact</a>
+            </li>
           </ul>
         </div>
       </nav>
