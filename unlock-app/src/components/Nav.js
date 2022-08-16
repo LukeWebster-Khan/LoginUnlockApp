@@ -6,7 +6,7 @@ export default function Nav() {
     <>
       <nav className="nav">
         <div>
-          <h1>Navicon</h1>
+          <h1>UnlockApp</h1>
         </div>
         <div>
           <ul className="nav-links">
