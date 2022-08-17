@@ -1,3 +1,15 @@
 .link-list {
   list-style: none;
+}
+
+.body-container {
+  display: flex;
+  justify-content: center;
+}
+.body-container__img-wrapper {
+  width: 250px;
+}
+.body-container__img-wrapper img {
+  width: 100%;
+  border-radius: 50%;
 }/*# sourceMappingURL=Body.css.map */
