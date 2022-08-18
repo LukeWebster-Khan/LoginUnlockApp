@@ -15,10 +15,7 @@ export default function Body() {
     <>
       <div className="body-container">
         <div className="body-container__img-wrapper">
-          <img
-            src="https://avatars.githubusercontent.com/u/85649986?v=4"
-            alt="profile"
-          ></img>
+          <img src={data.avatar_url} alt="profile"></img>
         </div>
         <div className="body-text">
           <div className="header">
