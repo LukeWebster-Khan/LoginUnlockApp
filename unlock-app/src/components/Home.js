@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Body.css";
 
-export default function Body() {
+export default function Home() {
   const [data, setData] = useState({});
   useEffect(
     function() {

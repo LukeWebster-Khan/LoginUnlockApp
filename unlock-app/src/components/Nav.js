@@ -1,6 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-
 import "../styles/Nav.css";
 
 export default function Nav() {
@@ -13,17 +11,26 @@ export default function Nav() {
         <div>
           <ul className="nav-links">
             <li>
-              <a>Home</a>
+              <a href="/">Home</a>
             </li>
+            <CustomLink href="/about">About</CustomLink>
             <li>
-              <a>About</a>
-            </li>
-            <li>
-              <a>Contact</a>
+              <a href="/contact">Contact</a>
             </li>
           </ul>
         </div>
       </nav>
     </>
+  );
+}
+
+function CustomLink({ href, children, ...props }) {
+  const path = window.location.pathname;
+  return (
+    <li className={path === href ? "active" : ""}>
+      <a href={href} {...props}>
+        {children}
+      </a>
+    </li>
   );
 }
