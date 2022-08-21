@@ -10,9 +10,8 @@
 }
 .nav .nav-links {
   display: flex;
-  list-style: none;
 }
-.nav .nav-links li {
+.nav .nav-links a {
   margin: 0 10px;
   padding: 10px;
   background-color: grey;
@@ -21,7 +20,7 @@
   transition: color 0.3s ease-in-out;
   cursor: pointer;
 }
-.nav .nav-links li:hover {
+.nav .nav-links a:hover {
   background-color: #000000;
   color: white;
 }/*# sourceMappingURL=Nav.css.map */

@@ -11,8 +11,7 @@
 
   .nav-links {
     display: flex;
-    list-style: none;
-    li {
+    a {
       margin: 0 10px;
       padding: 10px;
       background-color: grey;
@@ -21,7 +20,7 @@
       transition: color 0.3s ease-in-out;
       cursor: pointer;
     }
-    li:hover {
+    a:hover {
       background-color: #000000;
       color: white;
     }

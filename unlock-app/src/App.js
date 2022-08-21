@@ -3,7 +3,7 @@ import Nav from "./components/Nav";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import Home from "./components/Home";
-import About from "./components/About";
+import NotesApp from "./components/NotesApp";
 import "./App.css";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/NotesApp" element={<NotesApp />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>

@@ -9,28 +9,13 @@ export default function Nav() {
           <h1>UnlockApp</h1>
         </div>
         <div>
-          <ul className="nav-links">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <CustomLink href="/about">About</CustomLink>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-          </ul>
+          <div className="nav-links">
+            <a href="/">Home</a>
+            <a href="/NotesApp">NotesApp</a>
+            <a href="/contact">Contact</a>
+          </div>
         </div>
       </nav>
     </>
-  );
-}
-
-function CustomLink({ href, children, ...props }) {
-  const path = window.location.pathname;
-  return (
-    <li className={path === href ? "active" : ""}>
-      <a href={href} {...props}>
-        {children}
-      </a>
-    </li>
   );
 }
