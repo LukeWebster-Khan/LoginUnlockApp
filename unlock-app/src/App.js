@@ -1,25 +1,22 @@
 import React from "react";
 import Nav from "./components/Nav";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
 import Home from "./components/Home";
 import About from "./components/About";
 import "./App.css";
 
 function App() {
-  let Component;
-  switch (window.location.pathname) {
-    case "/":
-      Component = Home;
-      break;
-    case "/about":
-      Component = About;
-      break;
-    case "/contact":
-      break;
-  }
   return (
     <div className="App">
       <Nav />
-      <Component />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
