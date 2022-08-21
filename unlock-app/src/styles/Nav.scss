@@ -4,7 +4,11 @@
   align-items: center;
   max-width: 1100px;
   margin: 0 auto;
-
+  &__item-container {
+    @media (max-width: 768px) {
+      // display: none;
+    }
+  }
   h1 {
     font-size: 20px;
   }

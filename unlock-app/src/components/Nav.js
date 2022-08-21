@@ -8,7 +8,7 @@ export default function Nav() {
         <div>
           <h1>UnlockApp</h1>
         </div>
-        <div>
+        <div className="nav__item-container">
           <div className="nav-links">
             <a href="/">Home</a>
             <a href="/NotesApp">NotesApp</a>
