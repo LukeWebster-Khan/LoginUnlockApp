@@ -1,5 +1,9 @@
 .link-list {
   list-style: none;
+  a:visited {
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+  }
 }
 
 .body-container {
@@ -7,6 +11,7 @@
   justify-content: center;
   &__img-wrapper {
     width: 250px;
+    margin-right: 20px;
     img {
       width: 100%;
       border-radius: 50%;

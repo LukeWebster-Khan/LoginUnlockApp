@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Body.css";
 
-export default function Home() {
+export default function Home(props) {
   const [data, setData] = useState({});
   useEffect(
     function() {
@@ -45,6 +45,9 @@ export default function Home() {
                 <a href="https://www.theodinproject.com/users/sign_in">
                   The Odin Project
                 </a>
+              </li>
+              <li>
+                <p>This is a prop:{props.value}</p>
               </li>
             </ul>
           </div>

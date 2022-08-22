@@ -1,6 +1,10 @@
 .link-list {
   list-style: none;
 }
+.link-list a:visited {
+  color: rgb(5, 5, 5);
+  text-decoration: none;
+}
 
 .body-container {
   display: flex;
@@ -8,6 +12,7 @@
 }
 .body-container__img-wrapper {
   width: 250px;
+  margin-right: 20px;
 }
 .body-container__img-wrapper img {
   width: 100%;

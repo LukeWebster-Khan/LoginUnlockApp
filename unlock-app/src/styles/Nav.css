@@ -18,7 +18,12 @@
   border-radius: 20px;
   transition: background-color 0.5s ease-in-out;
   transition: color 0.3s ease-in-out;
+  text-decoration: none;
   cursor: pointer;
+}
+.nav .nav-links a:visited {
+  background-color: #333;
+  color: #fff;
 }
 .nav .nav-links a:hover {
   background-color: #000000;
