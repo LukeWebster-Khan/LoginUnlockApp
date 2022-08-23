@@ -1,0 +1,22 @@
+.note__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.note__wrapper {
+  flex: 1 0 28%;
+  min-height: 150px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(238, 238, 74);
+  border-radius: 20px;
+}
+.note__top {
+  display: flex;
+}
+.note__footer {
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=NoteApp.css.map */

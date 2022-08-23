@@ -15,7 +15,9 @@ function App() {
   return (
     <div className={mode ? "App light" : "App dark"}>
       <Nav />
-      <button onClick={changeTheme}>MODE</button>
+      <button className="theme-button" onClick={changeTheme}>
+        Mode
+      </button>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

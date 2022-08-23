@@ -46,9 +46,6 @@ export default function Home(props) {
                   The Odin Project
                 </a>
               </li>
-              <li>
-                <p>This is a prop:{props.value}</p>
-              </li>
             </ul>
           </div>
         </div>

@@ -3,6 +3,17 @@
   background-color: #333;
   color: #fff;
 }
+.dark .theme-button {
+  border-radius: 50px;
+  background-color: white;
+  margin-left: 20px;
+}
 .dark a {
   color: #fff;
+}
+
+.theme-button {
+  border-radius: 50px;
+  margin-left: 20px;
+  background-color: white;
 }/*# sourceMappingURL=App.css.map */
