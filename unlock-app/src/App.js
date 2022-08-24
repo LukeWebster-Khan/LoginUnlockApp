@@ -8,28 +8,20 @@ import NotesApp from "./components/NotesApp";
 import "./App.css";
 
 function App() {
-  const [notes, setNotes] = useState([
-    {
-      id: nanoid(),
-      text: "This is my first note",
-      date: "23/08/2022",
-    },
-    {
-      id: nanoid(),
-      text: "This is my second note",
-      date: "23/08/2022",
-    },
-    {
-      id: nanoid(),
-      text: "This is my third note",
-      date: "23/08/2022",
-    },
-  ]);
+  const [notes, setNotes] = useState([]);
+  const addNote = (text) => {
+    setNotes([
+      ...notes,
+      { id: nanoid(), text, date: new Date().toLocaleDateString() },
+    ]);
+    console.log(text);
+  };
   function changeTheme() {
     console.log("mode is ", mode);
     setMode((mode) => !mode);
   }
   const [mode, setMode] = useState(true);
+
   return (
     <div className={mode ? "App light" : "App dark"}>
       <Nav />
@@ -39,7 +31,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/NotesApp" element={<NotesApp notes={notes} />} />
+          <Route
+            path="/NotesApp"
+            element={<NotesApp handleAddNote={addNote} notes={notes} />}
+          />
           <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>

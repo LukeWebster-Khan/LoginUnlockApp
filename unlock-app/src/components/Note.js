@@ -1,5 +1,6 @@
 import React from "react";
 import { MdDeleteForever } from "react-icons/md";
+import "../styles/NoteApp.css";
 
 export default function Note({ id, text, date }) {
   return (
