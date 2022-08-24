@@ -1,6 +1,11 @@
+.App {
+  height: 100vh;
+}
+
 .dark {
   transition: background-color 0.5s ease-in-out;
   background-color: #333;
+  height: 100vh;
   color: #fff;
 }
 .dark .theme-button {
