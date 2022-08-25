@@ -8,7 +8,6 @@ const AddNote = ({ handleAddNote }) => {
 
     console.log(200 - e.target.value.length);
   };
-  const updateRemainingCharacters = () => {};
   const saveNote = () => {
     handleAddNote(noteText);
     setNoteText("");
@@ -16,6 +15,7 @@ const AddNote = ({ handleAddNote }) => {
   return (
     <div className="note__wrapper new">
       <textarea
+        maxLength={200}
         onChange={updateNoteText}
         value={noteText}
         rows="8"
