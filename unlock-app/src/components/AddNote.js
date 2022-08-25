@@ -3,10 +3,12 @@ import "../styles/NoteApp.css";
 
 const AddNote = ({ handleAddNote }) => {
   const [noteText, setNoteText] = useState("");
-
   const updateNoteText = (e) => {
     setNoteText(e.target.value);
+
+    console.log(200 - e.target.value.length);
   };
+  const updateRemainingCharacters = () => {};
   const saveNote = () => {
     handleAddNote(noteText);
     setNoteText("");
@@ -23,7 +25,7 @@ const AddNote = ({ handleAddNote }) => {
         {noteText}
       </textarea>
       <div className="note__new-footer">
-        <small>200 Remaining</small>
+        <small>{200 - noteText.length} characters remaining</small>
         <button onClick={saveNote} className="save">
           Add
         </button>

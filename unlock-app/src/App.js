@@ -12,7 +12,12 @@ function App() {
   const addNote = (text) => {
     setNotes([
       ...notes,
-      { id: nanoid(), text, date: new Date().toLocaleDateString() },
+      {
+        id: nanoid(),
+        text,
+        date: new Date().toLocaleDateString(),
+        key: nanoid(),
+      },
     ]);
     console.log(text);
   };
