@@ -11,6 +11,7 @@ export default function Note({ id, text, date }) {
         </div>
         <div className="note__footer">
           <small>{date}</small>
+          {/* create delete function */}
           <MdDeleteForever size={30} />
         </div>
       </div>
