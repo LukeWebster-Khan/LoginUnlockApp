@@ -21,6 +21,10 @@ function App() {
     ]);
     console.log(text);
   };
+  const deleteNotes = (id) => {
+    const newNotes = notes.filter((note) => note.id !== id);
+    setNotes(newNotes);
+  };
   function changeTheme() {
     console.log("mode is ", mode);
     setMode((mode) => !mode);
@@ -38,7 +42,13 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route
             path="/NotesApp"
-            element={<NotesApp handleAddNote={addNote} notes={notes} />}
+            element={
+              <NotesApp
+                handleAddNote={addNote}
+                handleDeleteNote={deleteNotes}
+                notes={notes}
+              />
+            }
           />
           <Route path="/" element={<Home />} />
         </Routes>

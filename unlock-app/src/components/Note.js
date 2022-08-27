@@ -2,7 +2,7 @@ import React from "react";
 import { MdDeleteForever } from "react-icons/md";
 import "../styles/NoteApp.css";
 
-export default function Note({ id, text, date }) {
+export default function Note({ id, text, date, handleDeleteNote }) {
   return (
     <>
       <div className="note__wrapper">
@@ -12,7 +12,12 @@ export default function Note({ id, text, date }) {
         <div className="note__footer">
           <small>{date}</small>
           {/* create delete function */}
-          <MdDeleteForever size={30} />
+          <MdDeleteForever
+            size={30}
+            onClick={() => {
+              handleDeleteNote(id);
+            }}
+          />
         </div>
       </div>
     </>
