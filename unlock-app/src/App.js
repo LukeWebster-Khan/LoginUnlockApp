@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 import Nav from "./components/Nav";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import NotesApp from "./components/NotesApp";
 import "./App.css";
 
 function App() {
   const [notes, setNotes] = useState([]);
+
   const addNote = (text) => {
     setNotes([
       ...notes,
@@ -19,8 +19,23 @@ function App() {
         key: nanoid(),
       },
     ]);
-    console.log(text);
   };
+  // local storage for saving state
+
+  useEffect(() => {
+    const savedNotes = JSON.parse(localStorage.getItem("react-notes-app-data"));
+    if (savedNotes) {
+      setNotes(savedNotes);
+    }
+  }, []);
+  useEffect(() => {
+    console.log("effect ran");
+  }, [notes]);
+
+  useEffect(() => {
+    localStorage.setItem("react-notes-app-data", JSON.stringify(notes));
+  }, [notes]);
+
   const deleteNotes = (id) => {
     const newNotes = notes.filter((note) => note.id !== id);
     setNotes(newNotes);

@@ -4,15 +4,13 @@ import AddNote from "./AddNote";
 import "../styles/NoteApp.css";
 
 const notesApp = ({ notes, handleAddNote, handleDeleteNote }) => {
-  const [count, setCount] = React.useState(0);
-  let increment = () => setCount(count + 1);
   return (
     <>
       <h1>Note Taker</h1>
       <div className="note__container">
         {notes.map((note) => (
           <Note
-            id={note.id}
+            key={note.id}
             text={note.text}
             date={note.date}
             handleDeleteNote={handleDeleteNote}
