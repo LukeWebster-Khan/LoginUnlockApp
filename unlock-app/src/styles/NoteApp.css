@@ -25,6 +25,21 @@
   justify-content: space-between;
   align-items: center;
 }
+.note__delete {
+  transition: transform 300ms ease-in-out, color 200ms ease-in-out;
+}
+.note__delete:hover {
+  transform: scale(1.5);
+  color: red;
+}
+.note__button {
+  transition: transform 300ms ease-in-out, color 200ms ease-in-out;
+  border-radius: 100%;
+  border: none;
+}
+.note__button:hover {
+  transform: scale(1.5);
+}
 
 .new {
   background-color: aqua;

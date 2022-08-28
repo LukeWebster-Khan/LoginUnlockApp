@@ -12,12 +12,14 @@ export default function Note({ id, text, date, handleDeleteNote }) {
         <div className="note__footer">
           <small>{date}</small>
           {/* create delete function */}
-          <MdDeleteForever
-            size={30}
-            onClick={() => {
-              handleDeleteNote(id);
-            }}
-          />
+          <div class="note__delete">
+            <MdDeleteForever
+              size={30}
+              onClick={() => {
+                handleDeleteNote(id);
+              }}
+            />
+          </div>
         </div>
       </div>
     </>
