@@ -9,6 +9,18 @@ import "./App.css";
 function App() {
   const [notes, setNotes] = useState([]);
 
+  // local storage for saving state
+  useEffect(() => {
+    const savedNotes = JSON.parse(localStorage.getItem("note-data"));
+    if (savedNotes) {
+      setNotes(savedNotes);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("note-data", JSON.stringify(notes));
+  }, [notes]);
+
   const addNote = (text) => {
     setNotes([
       ...notes,
@@ -20,21 +32,6 @@ function App() {
       },
     ]);
   };
-  // local storage for saving state
-
-  useEffect(() => {
-    const savedNotes = JSON.parse(localStorage.getItem("react-notes-app-data"));
-    if (savedNotes) {
-      setNotes(savedNotes);
-    }
-  }, []);
-  useEffect(() => {
-    console.log("effect ran");
-  }, [notes]);
-
-  useEffect(() => {
-    localStorage.setItem("react-notes-app-data", JSON.stringify(notes));
-  }, [notes]);
 
   const deleteNotes = (id) => {
     const newNotes = notes.filter((note) => note.id !== id);
